@@ -15,13 +15,13 @@ int partition(vector<int> &arr, int l, int r) {
         // encontra elemento <= pivô pela esquerda (arr[i] > pivot --> decrescente)
         do {
             i++;
-        } while (arr[i] > pivot);
+        } while (arr[i] < pivot);
 
         // encontra elemento >= ao pivô pela direita (arr[j] < pivot --> decrescente)
         // encontra elemento <= ao pivô pela direita (arr[j] > pivot --> crescente)
         do {
             j--;
-        } while (arr[j] < pivot);
+        } while (arr[j] > pivot);
 
         if (i >= j)
             return j;
